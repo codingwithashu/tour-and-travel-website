@@ -1,0 +1,73 @@
+getById: baseProcedure
+    .input(z.object({ id: z.number() }))
+    .query(async ({ input }) => {
+      const [pkg] = await db
+        .select({
+          id: packages.id,
+          slug: packages.slug,
+          title: packages.title,
+          description: packages.description,
+          price: packages.price,
+          originalPrice: packages.originalPrice,
+          rating: packages.rating,
+          reviewCount: packages.reviewCount,
+          image: packages.image,
+          featured: packages.featured,
+          duration: packages.duration,
+          destinationId: destinations.id,
+          destinationSlug: destinations.slug,
+          destinationName: destinations.name,
+          categoryId: categories.id,
+          categoryName: categories.name,
+          categorySlug: categories.slug,
+        })
+        .from(packages)
+        .leftJoin(destinations, eq(packages.destinationId, destinations.id))
+        .leftJoin(categories, eq(packages.categoryId, categories.id))
+        .where(eq(packages.id, input.id));
+
+      console.log(pkg);
+      if (!pkg) return null;
+
+      const [
+        gallery,
+        inclusions,
+        exclusions,
+        highlights,
+        itinerary,
+        pkgReviews,
+      ] = await Promise.all([
+        db
+          .select()
+          .from(packageGallery)
+          .where(eq(packageGallery.packageId, pkg.id)),
+        db
+          .select()
+          .from(packageInclusions)
+          .where(eq(packageInclusions.packageId, pkg.id)),
+        db
+          .select()
+          .from(packageExclusions)
+          .where(eq(packageExclusions.packageId, pkg.id)),
+        db
+          .select()
+          .from(packageHighlights)
+          .where(eq(packageHighlights.packageId, pkg.id)),
+        db
+          .select()
+          .from(packageItinerary)
+          .where(eq(packageItinerary.packageId, pkg.id))
+          .orderBy(asc(packageItinerary.dayNumber)),
+        db.select().from(reviews).where(eq(reviews.packageId, pkg.id)),
+      ]);
+
+      return {
+        ...pkg,
+        gallery,
+        inclusions,
+        exclusions,
+        highlights,
+        itinerary,
+        reviews: pkgReviews,
+      };
+    }),

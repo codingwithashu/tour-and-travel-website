@@ -1,0 +1,88 @@
+{
+  "destinations": [
+    {
+      "id": "1",
+      "name": "Santorini, Greece",
+      "country": "Greece",
+      "region": "Europe",
+      "image": "/placeholder.svg?height=300&width=400",
+      "description": "Iconic Greek island known for stunning sunsets and white-washed buildings",
+      "packageCount": 3,
+      "startingPrice": 1999,
+      "category": "Beach & Romance",
+      "rating": 4.7,
+      "reviewCount": 1280,
+      "bestTime": "April to October"
+    },
+    {
+      "id": "2",
+      "name": "Bali, Indonesia",
+      "country": "Indonesia",
+      "region": "Asia",
+      "image": "/placeholder.svg?height=300&width=400",
+      "description": "Tropical paradise with rich culture, beautiful temples, and pristine beaches",
+      "packageCount": 5,
+      "startingPrice": 1299,
+      "category": "Beach & Culture",
+      "rating": 4.6,
+      "reviewCount": 2450,
+      "bestTime": "April to September"
+    },
+    {
+      "id": "3",
+      "name": "Swiss Alps, Switzerland",
+      "country": "Switzerland",
+      "region": "Europe",
+      "image": "/placeholder.svg?height=300&width=400",
+      "description": "Majestic mountain ranges perfect for adventure and luxury alpine experiences",
+      "packageCount": 4,
+      "startingPrice": 2799,
+      "category": "Adventure & Luxury",
+      "rating": 4.8,
+      "reviewCount": 960,
+      "bestTime": "December to March"
+    },
+    {
+      "id": "4",
+      "name": "Tokyo, Japan",
+      "country": "Japan",
+      "region": "Asia",
+      "image": "/placeholder.svg?height=300&width=400",
+      "description": "Vibrant metropolis blending cutting-edge technology with ancient traditions",
+      "packageCount": 6,
+      "startingPrice": 1899,
+      "category": "City & Culture",
+      "rating": 4.7,
+      "reviewCount": 3100,
+      "bestTime": "March to May"
+    },
+    {
+      "id": "5",
+      "name": "Maldives",
+      "country": "Maldives",
+      "region": "Indian Ocean",
+      "image": "/placeholder.svg?height=300&width=400",
+      "description": "Luxury tropical paradise with overwater villas and pristine coral reefs",
+      "packageCount": 2,
+      "startingPrice": 3999,
+      "category": "Luxury & Honeymoon",
+      "rating": 4.9,
+      "reviewCount": 1780,
+      "bestTime": "November to April"
+    },
+    {
+      "id": "6",
+      "name": "Iceland",
+      "country": "Iceland",
+      "region": "Europe",
+      "image": "/placeholder.svg?height=300&width=400",
+      "description": "Land of fire and ice with dramatic landscapes and Northern Lights",
+      "packageCount": 3,
+      "startingPrice": 2299,
+      "category": "Nature & Adventure",
+      "rating": 4.8,
+      "reviewCount": 1420,
+      "bestTime": "September to March"
+    }
+  ]
+}

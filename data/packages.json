@@ -1,0 +1,246 @@
+{
+  "packages": [
+    {
+      "id": "1",
+      "title": "Kerala Backwaters & Hill Stations",
+      "destination": "Kerala, India",
+      "duration": "6 days, 5 nights",
+      "price": 25999,
+      "originalPrice": 29999,
+      "rating": 4.8,
+      "reviewCount": 456,
+      "image": "/placeholder.svg?height=400&width=600",
+      "gallery": [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ],
+      "category": "Cultural",
+      "featured": true,
+      "description": "Experience God's Own Country with serene backwaters, lush hill stations, and rich cultural heritage.",
+      "inclusions": [
+        "AC accommodation in premium hotels",
+        "Daily breakfast and dinner",
+        "Houseboat stay in Alleppey",
+        "Munnar hill station tour",
+        "Kathakali dance performance",
+        "Spice plantation visit",
+        "All transfers and sightseeing"
+      ],
+      "exclusions": [
+        "Flight tickets to/from Kerala",
+        "Travel insurance",
+        "Personal expenses",
+        "Lunch (except on houseboat)",
+        "Camera fees at monuments",
+        "Tips and gratuities"
+      ],
+      "highlights": [
+        "Cruise through scenic Alleppey backwaters",
+        "Stay overnight in traditional houseboat",
+        "Explore Munnar's tea gardens and hills",
+        "Visit aromatic spice plantations",
+        "Experience authentic Kerala cuisine"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival in Kochi",
+          "description": "Airport pickup and transfer to hotel. Evening visit to Chinese Fishing Nets and Fort Kochi."
+        },
+        {
+          "day": 2,
+          "title": "Kochi to Munnar",
+          "description": "Drive to Munnar hill station. Visit tea gardens and enjoy scenic mountain views."
+        },
+        {
+          "day": 3,
+          "title": "Munnar Sightseeing",
+          "description": "Visit Eravikulam National Park, Tea Museum, and Mattupetty Dam."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Rajasthan Royal Heritage",
+      "destination": "Rajasthan, India",
+      "duration": "8 days, 7 nights",
+      "price": 35999,
+      "originalPrice": 42999,
+      "rating": 4.9,
+      "reviewCount": 623,
+      "image": "/placeholder.svg?height=400&width=600",
+      "gallery": [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ],
+      "category": "Cultural",
+      "featured": true,
+      "description": "Discover the royal heritage of Rajasthan with magnificent palaces, desert safaris, and vibrant culture.",
+      "inclusions": [
+        "AC accommodation in heritage hotels",
+        "Daily breakfast and dinner",
+        "Desert safari in Jaisalmer",
+        "Palace visits and guided tours",
+        "Cultural folk dance performances",
+        "Camel ride in Thar Desert",
+        "All transfers in AC vehicles"
+      ],
+      "exclusions": [
+        "Flight tickets to/from Rajasthan",
+        "Travel insurance",
+        "Personal expenses",
+        "Lunch (except specified)",
+        "Monument entry fees",
+        "Tips and gratuities"
+      ],
+      "highlights": [
+        "Explore the Pink City of Jaipur",
+        "Experience luxury at Udaipur's Lake Palace",
+        "Desert camping under starlit sky",
+        "Visit magnificent Amber Fort",
+        "Enjoy traditional Rajasthani cuisine"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Dubai Shopping & Luxury",
+      "destination": "Dubai, UAE",
+      "duration": "5 days, 4 nights",
+      "price": 45999,
+      "originalPrice": 52999,
+      "rating": 4.7,
+      "reviewCount": 789,
+      "image": "/placeholder.svg?height=400&width=600",
+      "gallery": [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ],
+      "category": "Luxury",
+      "featured": true,
+      "description": "Experience the glamour of Dubai with luxury shopping, world-class attractions, and desert adventures.",
+      "inclusions": [
+        "Return flights from major Indian cities",
+        "4 nights in 4-star hotel",
+        "Daily breakfast",
+        "Dubai city tour",
+        "Desert safari with BBQ dinner",
+        "Burj Khalifa observation deck",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "UAE visa fees",
+        "Travel insurance",
+        "Personal expenses",
+        "Lunch and dinner (except specified)",
+        "Shopping expenses",
+        "Optional activities"
+      ],
+      "highlights": [
+        "Visit world's tallest building Burj Khalifa",
+        "Shop at the magnificent Dubai Mall",
+        "Experience thrilling desert safari",
+        "Explore traditional Gold and Spice Souks",
+        "Enjoy luxury dining and entertainment"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Thailand Beach Paradise",
+      "destination": "Phuket & Bangkok, Thailand",
+      "duration": "7 days, 6 nights",
+      "price": 38999,
+      "originalPrice": 44999,
+      "rating": 4.6,
+      "reviewCount": 534,
+      "image": "/placeholder.svg?height=400&width=600",
+      "category": "Beach",
+      "featured": false,
+      "description": "Relax on pristine beaches and explore vibrant Bangkok in this perfect Thailand getaway.",
+      "inclusions": [
+        "Return flights from India",
+        "6 nights accommodation",
+        "Daily breakfast",
+        "Island hopping tour",
+        "Bangkok city tour",
+        "Thai massage session",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "Thailand visa fees",
+        "Travel insurance",
+        "Personal expenses",
+        "Lunch and dinner (except specified)",
+        "Water sports activities",
+        "Optional tours"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Himachal Hill Station Escape",
+      "destination": "Shimla & Manali, India",
+      "duration": "6 days, 5 nights",
+      "price": 22999,
+      "originalPrice": 26999,
+      "rating": 4.5,
+      "reviewCount": 367,
+      "image": "/placeholder.svg?height=400&width=600",
+      "category": "Adventure",
+      "featured": false,
+      "description": "Escape to the cool mountains of Himachal with scenic beauty, adventure activities, and fresh mountain air.",
+      "inclusions": [
+        "AC accommodation in hill stations",
+        "Daily breakfast and dinner",
+        "Shimla and Manali sightseeing",
+        "Rohtang Pass visit (subject to weather)",
+        "Adventure activities",
+        "All transfers in AC vehicles",
+        "Professional guide"
+      ],
+      "exclusions": [
+        "Flight/train tickets to Himachal",
+        "Travel insurance",
+        "Personal expenses",
+        "Lunch (except specified)",
+        "Adventure activity fees",
+        "Tips and gratuities"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Singapore Family Fun",
+      "destination": "Singapore",
+      "duration": "5 days, 4 nights",
+      "price": 42999,
+      "originalPrice": 48999,
+      "rating": 4.8,
+      "reviewCount": 445,
+      "image": "/placeholder.svg?height=400&width=600",
+      "category": "Family",
+      "featured": false,
+      "description": "Perfect family destination with world-class attractions, diverse cuisine, and modern city experiences.",
+      "inclusions": [
+        "Return flights from major Indian cities",
+        "4 nights in family-friendly hotel",
+        "Daily breakfast",
+        "Universal Studios entry",
+        "Singapore city tour",
+        "Night Safari experience",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "Singapore visa fees",
+        "Travel insurance",
+        "Personal expenses",
+        "Lunch and dinner (except specified)",
+        "Additional attraction tickets",
+        "Shopping expenses"
+      ]
+    }
+  ]
+}

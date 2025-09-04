@@ -1,0 +1,48 @@
+{
+  "reviews": [
+    {
+      "id": "1",
+      "packageId": "1",
+      "userName": "Sarah Johnson",
+      "userAvatar": "/placeholder.svg?height=40&width=40",
+      "rating": 5,
+      "title": "Absolutely magical experience!",
+      "comment": "The Santorini sunset tour exceeded all expectations. The hotel was luxurious, the views were breathtaking, and our guide was incredibly knowledgeable. The wine tasting was a highlight!",
+      "date": "2024-01-15",
+      "verified": true
+    },
+    {
+      "id": "2",
+      "packageId": "1",
+      "userName": "Michael Chen",
+      "userAvatar": "/placeholder.svg?height=40&width=40",
+      "rating": 5,
+      "title": "Perfect honeymoon destination",
+      "comment": "My wife and I had the most romantic time in Santorini. Every detail was perfectly planned, from the cave hotel to the private sunset cruise. Highly recommended!",
+      "date": "2024-01-08",
+      "verified": true
+    },
+    {
+      "id": "3",
+      "packageId": "2",
+      "userName": "Emma Rodriguez",
+      "userAvatar": "/placeholder.svg?height=40&width=40",
+      "rating": 5,
+      "title": "Cultural immersion at its best",
+      "comment": "The Bali cultural tour was incredible. We learned so much about local traditions, the cooking class was fun, and the spa treatments were divine. Great value for money!",
+      "date": "2024-01-20",
+      "verified": true
+    },
+    {
+      "id": "4",
+      "packageId": "3",
+      "userName": "David Thompson",
+      "userAvatar": "/placeholder.svg?height=40&width=40",
+      "rating": 5,
+      "title": "Swiss Alps adventure of a lifetime",
+      "comment": "The scenic train rides were spectacular, and the mountain hotels were top-notch. Our guide was excellent and the whole experience was seamlessly organized.",
+      "date": "2024-01-12",
+      "verified": true
+    }
+  ]
+}
