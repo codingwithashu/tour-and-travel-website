@@ -7,6 +7,7 @@ import { PageTransition } from "@/components/page-transition";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { getQueryClient, trpc } from "@/trpc/server";
 
+export const dymanic = "force-dynamic";
 
 export default async function HomePage() {
   const queryClient = getQueryClient();

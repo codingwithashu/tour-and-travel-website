@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 import { getQueryClient, trpc } from "@/trpc/server";
 
+export const dymanic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Travel Packages - Atharv Travel",
   description:
