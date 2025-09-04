@@ -1,7 +1,6 @@
 import { PageTransition } from "@/components/page-transition";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { QuickEnquiryButton } from "@/components/quick-enquiry-button";
 import { DestinationsPage } from "@/components/destinations-page";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
@@ -28,7 +27,6 @@ export default async function Destinations() {
           </Suspense>
         </HydrationBoundary>
         <Footer />
-        <QuickEnquiryButton />
       </div>
     </PageTransition>
   );

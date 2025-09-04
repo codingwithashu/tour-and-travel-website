@@ -1,7 +1,6 @@
 import { PageTransition } from "@/components/page-transition";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { QuickEnquiryButton } from "@/components/quick-enquiry-button";
 import { AboutPage } from "@/components/about-page";
 
 export const metadata = {
@@ -17,7 +16,6 @@ export default function About() {
         <Navigation />
         <AboutPage />
         <Footer />
-        <QuickEnquiryButton />
       </div>
     </PageTransition>
   );

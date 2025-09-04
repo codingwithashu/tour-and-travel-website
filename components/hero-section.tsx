@@ -122,7 +122,7 @@ export function HeroSection() {
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-foreground px-8 py-3 text-lg bg-transparent"
               >
-                <Link href="/enquiry">Get Quote</Link>
+                <Link href="/contact">Get Quote</Link>
               </Button>
             </motion.div>
           </motion.div>

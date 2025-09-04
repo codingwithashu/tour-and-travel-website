@@ -497,17 +497,6 @@ export function PackageDetailPage({ slug }: PackageDetailPageProps) {
                       <Link href={`/book/${pkg.id}`}>Book Now</Link>
                     </Button>
 
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="lg"
-                      className="w-full bg-transparent"
-                    >
-                      <Link href={`/enquiry?package=${pkg.id}`}>
-                        Send Enquiry
-                      </Link>
-                    </Button>
-
                     <div className="grid grid-cols-2 gap-2">
                       <Button
                         variant="outline"

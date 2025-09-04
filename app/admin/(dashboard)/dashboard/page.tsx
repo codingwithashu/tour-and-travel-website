@@ -1,6 +1,5 @@
 "use client";
 
-import { StatsCards } from "@/components/admin/dashboard/stats-cards";
 import {
   PackagesByCategoryChart,
   CategoryDistributionChart,
