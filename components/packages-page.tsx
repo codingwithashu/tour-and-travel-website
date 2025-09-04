@@ -501,11 +501,11 @@ function PackageCard({
               <div className="text-right">
                 <div className="flex items-baseline gap-2 mb-1">
                   <span className="text-3xl font-bold text-primary">
-                    {formatIndianCurrency(pkg.price)}
+                    {formatIndianCurrency(parseInt(pkg.price!))}
                   </span>
                   {pkg.originalPrice && (
                     <span className="text-lg line-through text-muted-foreground">
-                      {formatIndianCurrency(pkg.originalPrice)}
+                      {formatIndianCurrency(parseInt(pkg.originalPrice))}
                     </span>
                   )}
                 </div>
@@ -607,11 +607,11 @@ function PackageCard({
       <CardFooter className="p-4 pt-0 flex flex-col gap-2">
         <div className="flex items-baseline gap-2">
           <span className="text-lg font-bold">
-            {formatIndianCurrency(pkg.price)}
+            {formatIndianCurrency(parseInt(pkg.price!))}
           </span>
           {pkg.originalPrice && (
             <span className="text-xs line-through text-muted-foreground">
-              {formatIndianCurrency(pkg.originalPrice)}
+              {formatIndianCurrency(parseInt(pkg.originalPrice))}
             </span>
           )}
           <span className="text-xs text-muted-foreground">/person</span>

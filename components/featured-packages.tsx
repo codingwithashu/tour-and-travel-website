@@ -99,7 +99,7 @@ export function FeaturedPackages() {
           viewport={{ once: true }}
         >
           {featuredPackages.map((pkg, index) => (
-            <motion.div key={pkg.id} variants={itemVariants}>
+            <motion.div key={pkg.id}>
               <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card">
                 <CardHeader className="p-0 relative">
                   <motion.div

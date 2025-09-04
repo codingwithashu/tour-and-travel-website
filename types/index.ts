@@ -36,18 +36,20 @@ export interface Package {
   id: number;
   slug: string;
   title: string;
-  destinationId: number;
-  destinationName: string;
-  categoryId: number;
-  categoryName: string;
-  duration?: string;
-  price: number;
-  originalPrice?: number;
-  rating?: number;
-  reviewCount?: number;
-  image?: string;
-  featured: boolean;
-  description?: string;
+  destinationId: number | null;   // ← changed
+  destinationSlug: string | null; // ← changed
+  destinationName: string | null; // ← changed
+  categoryId: number | null;      // ← changed
+  categoryName: string | null;    // ← changed
+  categorySlug: string | null;    // ← changed
+  duration?: string | null;
+  price: string | null;
+  originalPrice?: string | null;
+  rating?: string | null;
+  reviewCount?: number | null;
+  image?: string | null;
+  featured: boolean | null;
+  description?: string | null;
 }
 
 // -------------------------
