@@ -3,25 +3,8 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import TravelSearch from "./travel-search";
-import { useTRPC } from "@/trpc/client";
-import { useSuspenseQuery } from "@tanstack/react-query";
-
-export const dynamic = "force-dynamic";
 
 export function HeroSection() {
-  const [departureDate, setDepartureDate] = useState<Date>();
-  const [returnDate, setReturnDate] = useState<Date>();
-  const [selectedDestination, setSelectedDestination] = useState("");
-  const [openDestination, setOpenDestination] = useState(false);
-  const [openDeparture, setOpenDeparture] = useState(false);
-  const [openReturn, setOpenReturn] = useState(false);
-
-  const trpc = useTRPC();
-  const { data: destinations = [] } = useSuspenseQuery(
-    trpc.destinations.getAll.queryOptions()
-  );
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -68,7 +51,7 @@ export function HeroSection() {
             destinations with expert local guidance and unbeatable prices.
           </motion.p>
 
-          <TravelSearch destinations={destinations} />
+          {/* <TravelSearch destinations={destinations} /> */}
 
           {/* CTA Buttons */}
           <motion.div
