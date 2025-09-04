@@ -1,7 +1,6 @@
 import { PackagesScreen } from "@/components/packages-page";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import type { Metadata } from "next";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 import { getQueryClient, trpc } from "@/trpc/server";
 

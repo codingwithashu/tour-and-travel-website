@@ -8,6 +8,8 @@ export const createTRPCContext = cache(async () => {
      */
     return { userId: 'user_123' };
 });
+export type Context = Awaited<ReturnType<typeof createTRPCContext>>
+
 // Avoid exporting the entire t-object
 // since it's not very descriptive.
 // For instance, the use of a t variable
@@ -22,5 +24,3 @@ const t = initTRPC.create({
 export const createTRPCRouter = t.router;
 export const createCallerFactory = t.createCallerFactory;
 export const baseProcedure = t.procedure;
-
-export type Context = Awaited<ReturnType<typeof createTRPCContext>>
