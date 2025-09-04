@@ -11,7 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Clock, MapPin, Heart } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { getFeaturedPackages } from "@/lib/data";
 import { formatIndianCurrency } from "@/lib/utils";
 import { useTRPC } from "@/trpc/client";
 import { useQueryClient, useSuspenseQuery } from "@tanstack/react-query";

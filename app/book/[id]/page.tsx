@@ -1,7 +1,6 @@
 import { BookingPage } from "@/components/booking-page";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { getPackageById } from "@/lib/data";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 

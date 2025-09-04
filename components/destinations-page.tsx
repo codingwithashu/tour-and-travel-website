@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Calendar, Users } from "lucide-react";
-import { getAllDestinations } from "@/lib/data";
 import { formatIndianCurrency } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
