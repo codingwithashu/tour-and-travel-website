@@ -44,7 +44,7 @@ interface PackagesPageProps {
   isPackage?: boolean;
 }
 
-export function PackagesPage({ slug, isPackage = false }: PackagesPageProps) {
+export function PackagesScreen({ slug, isPackage = false }: PackagesPageProps) {
   const trpc = useTRPC();
   const queryClient = useQueryClient();
 

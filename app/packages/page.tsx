@@ -1,4 +1,4 @@
-import { PackagesPage } from "@/components/packages-page";
+import { PackagesScreen } from "@/components/packages-page";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "travel packages, vacation deals, holiday packages, adventure tours, luxury travel",
 };
 
-export default async function PackagesIndexPage() {
+export default async function PackagesPage() {
   const queryClient = getQueryClient();
   await queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
 
@@ -25,7 +25,7 @@ export default async function PackagesIndexPage() {
       <main>
         <HydrationBoundary state={dehydrate(queryClient)}>
           <Suspense fallback={<PackagesSkeleton />}>
-            <PackagesPage />
+            <PackagesScreen />
           </Suspense>
         </HydrationBoundary>
       </main>

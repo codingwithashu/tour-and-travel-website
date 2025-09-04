@@ -24,12 +24,9 @@ import {
   Camera,
 } from "lucide-react";
 import Link from "next/link";
-import { getReviewsByPackageId } from "@/lib/data";
 import { formatIndianCurrency } from "@/lib/utils";
-import type { Package } from "@/types";
-import { useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
-import { trpc } from "@/trpc/server";
 import { useTRPC } from "@/trpc/client";
+import { useSuspenseQuery } from "@tanstack/react-query";
 
 interface PackageDetailPageProps {
   slug: string;
@@ -37,7 +34,7 @@ interface PackageDetailPageProps {
 
 export function PackageDetailPage({ slug }: PackageDetailPageProps) {
   console.log(slug);
-  const trpc = useTRPC();
+  const trpc = useTRPC(); 
   const { data: pkg } = useSuspenseQuery(
     trpc.packages.getBySlug.queryOptions({ slug: slug })
   );

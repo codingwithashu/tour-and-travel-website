@@ -1,4 +1,4 @@
-import { PackagesPage } from "@/components/packages-page";
+import { PackagesScreen } from "@/components/packages-page";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
@@ -32,7 +32,7 @@ export default async function PackagesPageRoute({
       <main>
         <HydrationBoundary state={dehydrate(queryClient)}>
           <Suspense fallback={<PackagesSkeleton />}>
-            <PackagesPage slug={slug} isPackage={true} />
+            <PackagesScreen slug={slug} isPackage={true} />
           </Suspense>
         </HydrationBoundary>
       </main>
