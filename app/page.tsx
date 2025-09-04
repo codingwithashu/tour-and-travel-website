@@ -9,7 +9,7 @@ import { getQueryClient, trpc } from "@/trpc/server";
 
 export const dymanic = "force-dynamic";
 
-export default async function HomePage() {
+export default async function Page() {
   const queryClient = getQueryClient();
   void queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
 
