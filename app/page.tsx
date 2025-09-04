@@ -9,6 +9,7 @@ import { Suspense } from "react";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { Loader } from "@/components/loader";
 
+
 export default async function HomePage() {
   const queryClient = getQueryClient();
   await queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
