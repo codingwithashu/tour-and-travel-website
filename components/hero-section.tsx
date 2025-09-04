@@ -8,6 +8,8 @@ import TravelSearch from "./travel-search";
 import { useTRPC } from "@/trpc/client";
 import { useSuspenseQuery } from "@tanstack/react-query";
 
+export const dynamic = "force-dynamic";
+
 export function HeroSection() {
   const [departureDate, setDepartureDate] = useState<Date>();
   const [returnDate, setReturnDate] = useState<Date>();
