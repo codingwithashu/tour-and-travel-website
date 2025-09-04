@@ -4,7 +4,10 @@ import { baseProcedure, createTRPCRouter } from "@/trpc/init"
 import { eq } from "drizzle-orm"
 import { z } from "zod"
 import { bookingStatusSchema, createBookingSchema, updateBookingSchema } from "./schema"
+import { Resend } from "resend";
+import BookingConfirmationEmail from "@/content/emails/BookingConfirmationEmail"
 
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const bookingsRouter = createTRPCRouter({
   getAll: baseProcedure.query(async ({ ctx }) => {
@@ -55,7 +58,17 @@ export const bookingsRouter = createTRPCRouter({
 
 
   create: baseProcedure.input(createBookingSchema).mutation(async ({ ctx, input }) => {
-    const [booking] = await db.insert(bookings).values(input).returning()
+    const [booking] = await db.insert(bookings).values(input).returning();
+    try {
+      await resend.emails.send({
+        from: "Tours & Travels <bookings@geleza.app>",
+        to: booking.email,
+        subject: "Your Booking Confirmation",
+        react: BookingConfirmationEmail({ booking }),
+      });
+    } catch (error) {
+      console.error("Email send error:", error);
+    }
     return booking
   }),
 

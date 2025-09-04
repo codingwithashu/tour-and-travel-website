@@ -18,7 +18,6 @@ const errorMiddleware = t.middleware(async ({ path, next }) => {
     } catch (err) {
         console.error(`❌ tRPC failed on ${path}:`, err);
 
-        // If it’s already a TRPCError, rethrow
         if (err instanceof TRPCError) {
             throw err;
         }
@@ -32,7 +31,7 @@ const errorMiddleware = t.middleware(async ({ path, next }) => {
     }
 });
 
-export const baseProcedure = t.procedure.use(errorMiddleware);
+export const baseProcedure = t.procedure;
 
 export const createTRPCRouter = t.router;
 export const createCallerFactory = t.createCallerFactory;

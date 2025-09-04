@@ -11,7 +11,7 @@ import { Loader } from "@/components/loader";
 
 export default async function HomePage() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
+  await queryClient.prefetchQuery(trpc.packages.getFeaturedAll.queryOptions());
 
   return (
     <PageTransition>
