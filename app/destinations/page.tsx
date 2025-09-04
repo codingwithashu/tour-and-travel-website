@@ -5,7 +5,7 @@ import { DestinationsPage } from "@/components/destinations-page";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 
-export const dymanic = "force-dynamic";
+export const dynamic = "force-dynamic";
 
 export default async function Destinations() {
   const queryClient = getQueryClient();
