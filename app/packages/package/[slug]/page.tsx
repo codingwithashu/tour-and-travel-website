@@ -5,11 +5,8 @@ import { notFound } from "next/navigation";
 import {
   HydrationBoundary,
   dehydrate,
-  useSuspenseQuery,
 } from "@tanstack/react-query";
-import { Suspense } from "react";
 import { caller, getQueryClient, trpc } from "@/trpc/server";
-import { PackageDetailSkeleton } from "@/components/package-detail-skeleton";
 import { Metadata } from "next";
 
 export async function generateMetadata({
@@ -60,9 +57,7 @@ export default async function PackagePage({
       <Navigation />
       <main>
         <HydrationBoundary state={dehydrate(queryClient)}>
-          <Suspense fallback={<PackageDetailSkeleton />}>
             <PackageDetailPage slug={slug} />
-          </Suspense>
         </HydrationBoundary>
       </main>
       <Footer />

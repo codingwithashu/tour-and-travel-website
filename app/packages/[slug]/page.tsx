@@ -3,9 +3,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
-import { Suspense } from "react";
 import { getQueryClient, trpc } from "@/trpc/server";
-import { PackagesSkeleton } from "@/components/packages-skeleton";
 
 export const metadata: Metadata = {
   title: "Travel Packages - Atharv Travel",
@@ -31,9 +29,7 @@ export default async function PackagesPageRoute({
       <Navigation />
       <main>
         <HydrationBoundary state={dehydrate(queryClient)}>
-          <Suspense fallback={<PackagesSkeleton />}>
             <PackagesScreen slug={slug} isPackage={true} />
-          </Suspense>
         </HydrationBoundary>
       </main>
       <Footer />

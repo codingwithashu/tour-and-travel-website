@@ -5,9 +5,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { PageTransition } from "@/components/page-transition";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
-import { Suspense } from "react";
 import { getQueryClient, trpc } from "@/trpc/server";
-import { Loader } from "@/components/loader";
 
 
 export default async function HomePage() {
@@ -21,9 +19,7 @@ export default async function HomePage() {
         <main>
           <HeroSection />
           <HydrationBoundary state={dehydrate(queryClient)}>
-            <Suspense fallback={<Loader text="Fetching packages..." />}>
-              <FeaturedPackages />
-            </Suspense>
+            <FeaturedPackages />
           </HydrationBoundary>
           <WhyChooseUs />
         </main>

@@ -4,8 +4,6 @@ import { Footer } from "@/components/footer";
 import { DestinationsPage } from "@/components/destinations-page";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
-import { Suspense } from "react";
-import { Loader } from "@/components/loader";
 
 export const metadata = {
   title: "Popular Destinations | Atharv Travels",
@@ -22,9 +20,7 @@ export default async function Destinations() {
       <div className="min-h-screen bg-background">
         <Navigation />
         <HydrationBoundary state={dehydrate(queryClient)}>
-          <Suspense fallback={<Loader text="Fetching..." />}>
             <DestinationsPage />
-          </Suspense>
         </HydrationBoundary>
         <Footer />
       </div>
