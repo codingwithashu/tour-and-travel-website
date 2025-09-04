@@ -4,6 +4,8 @@ import { Footer } from "@/components/footer";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { getQueryClient, trpc } from "@/trpc/server";
 
+export const dymanic = "force-dynamic";
+
 export default async function PackagesPageRoute({
   params,
 }: {

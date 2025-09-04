@@ -4,6 +4,8 @@ import { Footer } from "@/components/footer";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+export const dymanic = "force-dynamic";
+
 interface BookingPageProps {
   params: {
     id: string;
