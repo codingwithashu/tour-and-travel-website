@@ -5,12 +5,6 @@ import { DestinationsPage } from "@/components/destinations-page";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 
-export const metadata = {
-  title: "Popular Destinations | Atharv Travels",
-  description:
-    "Explore amazing destinations across India and around the world. From Kerala backwaters to Dubai skylines, find your perfect getaway.",
-};
-
 export default async function Destinations() {
   const queryClient = getQueryClient();
   void queryClient.prefetchQuery(trpc.destinations.getAll.queryOptions());

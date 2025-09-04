@@ -3,35 +3,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { notFound } from "next/navigation";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
-import { caller, getQueryClient, trpc } from "@/trpc/server";
-import { Metadata } from "next";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const { slug } = params;
-
-  const packageData = await caller.packages.getBySlug({ slug });
-
-  if (!packageData) {
-    return {
-      title: "Package Not Found - Atharv Travel",
-    };
-  }
-
-  return {
-    title: `${packageData?.title} - Atharv Travel`,
-    description: packageData.description ?? undefined,
-    keywords: `${packageData.destination}, ${packageData.category}, travel package, vacation, ${packageData.title}`,
-    openGraph: {
-      title: packageData.title,
-      description: packageData.description ?? "",
-      images: [packageData.image ?? "/placeholder.png"],
-    },
-  };
-}
+import { getQueryClient, trpc } from "@/trpc/server";
 
 export default async function PackagePage({
   params,
