@@ -8,13 +8,14 @@ export default async function Page() {
     <PageTransition>
       <div className="min-h-screen bg-background">
         <Navigation />
-        {/* <main>
-          <HeroSection />
+        <main>
+          csacasalk
+          {/* <HeroSection />
           <HydrationBoundary state={dehydrate(queryClient)}>
             <FeaturedPackages />
           </HydrationBoundary>
-          <WhyChooseUs />
-        </main> */}
+          <WhyChooseUs /> */}
+        </main>
         <Footer />
       </div>
     </PageTransition>
