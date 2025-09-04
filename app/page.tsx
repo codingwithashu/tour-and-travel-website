@@ -10,7 +10,7 @@ import { getQueryClient, trpc } from "@/trpc/server";
 
 export default async function HomePage() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
+  void queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
 
   return (
     <PageTransition>

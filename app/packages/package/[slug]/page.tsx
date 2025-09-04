@@ -2,10 +2,7 @@ import { PackageDetailPage } from "@/components/package-detail-page";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { notFound } from "next/navigation";
-import {
-  HydrationBoundary,
-  dehydrate,
-} from "@tanstack/react-query";
+import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 import { caller, getQueryClient, trpc } from "@/trpc/server";
 import { Metadata } from "next";
 
@@ -43,7 +40,7 @@ export default async function PackagePage({
 }) {
   const { slug } = params;
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(
+  void queryClient.prefetchQuery(
     trpc.packages.getBySlug.queryOptions({ slug })
   );
 
@@ -57,7 +54,7 @@ export default async function PackagePage({
       <Navigation />
       <main>
         <HydrationBoundary state={dehydrate(queryClient)}>
-            <PackageDetailPage slug={slug} />
+          <PackageDetailPage slug={slug} />
         </HydrationBoundary>
       </main>
       <Footer />

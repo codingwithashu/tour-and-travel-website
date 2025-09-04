@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default async function PackagesPage() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
+  void queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
 
   return (
     <div className="min-h-screen bg-background">

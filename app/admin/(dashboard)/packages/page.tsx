@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export default async function PackagesPage() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
+  void queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>

@@ -13,14 +13,14 @@ export const metadata = {
 
 export default async function Destinations() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(trpc.destinations.getAll.queryOptions());
+  void queryClient.prefetchQuery(trpc.destinations.getAll.queryOptions());
 
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
         <Navigation />
         <HydrationBoundary state={dehydrate(queryClient)}>
-            <DestinationsPage />
+          <DestinationsPage />
         </HydrationBoundary>
         <Footer />
       </div>

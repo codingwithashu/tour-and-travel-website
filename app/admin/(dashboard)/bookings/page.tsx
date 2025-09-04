@@ -5,11 +5,11 @@ import { BookingsPage } from "@/components/admin/bookings/booking";
 
 export default async function BookingPage() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(trpc.bookings.getAll.queryOptions());
+  void queryClient.prefetchQuery(trpc.bookings.getAll.queryOptions());
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-        <BookingsPage />
+      <BookingsPage />
     </HydrationBoundary>
   );
 }

@@ -5,11 +5,11 @@ import { CategoryPage } from "@/components/admin/category/category";
 
 export default async function GodownPage() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(trpc.categories.getAll.queryOptions());
+  void queryClient.prefetchQuery(trpc.categories.getAll.queryOptions());
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-        <CategoryPage />
+      <CategoryPage />
     </HydrationBoundary>
   );
 }

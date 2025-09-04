@@ -20,7 +20,7 @@ export default async function DPackagePageRoute({
 }) {
   const { slug } = await params;
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(
+  void queryClient.prefetchQuery(
     trpc.packages.getAll.queryOptions({ destinationSlug: slug })
   );
   return (

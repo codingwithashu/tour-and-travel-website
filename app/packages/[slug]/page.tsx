@@ -20,7 +20,7 @@ export default async function PackagesPageRoute({
 }) {
   const { slug } = await params;
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(
+  void queryClient.prefetchQuery(
     trpc.packages.getAll.queryOptions({ packageSlug: slug })
   );
 
@@ -29,7 +29,7 @@ export default async function PackagesPageRoute({
       <Navigation />
       <main>
         <HydrationBoundary state={dehydrate(queryClient)}>
-            <PackagesScreen slug={slug} isPackage={true} />
+          <PackagesScreen slug={slug} isPackage={true} />
         </HydrationBoundary>
       </main>
       <Footer />
