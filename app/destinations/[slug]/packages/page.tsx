@@ -1,10 +1,19 @@
 import { PackagesScreen } from "@/components/packages-page";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import type { Metadata } from "next";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+import { Suspense } from "react";
 import { getQueryClient, trpc } from "@/trpc/server";
+import { Loader } from "@/components/loader";
 
-export const dynamic = "force-dynamic";
+export const metadata: Metadata = {
+  title: "Travel Packages - Atharv Travel",
+  description:
+    "Discover our curated collection of travel packages to amazing destinations worldwide. Find your perfect adventure with flexible booking options.",
+  keywords:
+    "travel packages, vacation deals, holiday packages, adventure tours, luxury travel",
+};
 
 export default async function DPackagePageRoute({
   params,
@@ -13,7 +22,7 @@ export default async function DPackagePageRoute({
 }) {
   const { slug } = await params;
   const queryClient = getQueryClient();
-  void queryClient.prefetchQuery(
+  await queryClient.prefetchQuery(
     trpc.packages.getAll.queryOptions({ destinationSlug: slug })
   );
   return (
@@ -21,7 +30,9 @@ export default async function DPackagePageRoute({
       <Navigation />
       <main>
         <HydrationBoundary state={dehydrate(queryClient)}>
-          <PackagesScreen slug={slug} />
+          <Suspense fallback={<Loader text="Fetching..." />}>
+            <PackagesScreen slug={slug} />
+          </Suspense>
         </HydrationBoundary>
       </main>
       <Footer />

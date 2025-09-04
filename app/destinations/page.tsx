@@ -4,19 +4,27 @@ import { Footer } from "@/components/footer";
 import { DestinationsPage } from "@/components/destinations-page";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+import { Suspense } from "react";
+import { Loader } from "@/components/loader";
 
-export const dynamic = "force-dynamic";
+export const metadata = {
+  title: "Popular Destinations | Atharv Travels",
+  description:
+    "Explore amazing destinations across India and around the world. From Kerala backwaters to Dubai skylines, find your perfect getaway.",
+};
 
 export default async function Destinations() {
   const queryClient = getQueryClient();
-  void queryClient.prefetchQuery(trpc.destinations.getAll.queryOptions());
+  await queryClient.prefetchQuery(trpc.destinations.getAll.queryOptions());
 
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
         <Navigation />
         <HydrationBoundary state={dehydrate(queryClient)}>
-          <DestinationsPage />
+          <Suspense fallback={<Loader text="Fetching..." />}>
+            <DestinationsPage />
+          </Suspense>
         </HydrationBoundary>
         <Footer />
       </div>
