@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "travel packages, vacation deals, holiday packages, adventure tours, luxury travel",
 };
 
-export default async function PackagesPage() {
+export default async function Packages() {
   const queryClient = getQueryClient();
   void queryClient.prefetchQuery(trpc.packages.getAll.queryOptions());
 
