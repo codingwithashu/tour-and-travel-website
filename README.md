@@ -133,7 +133,7 @@ RESEND_API_KEY=""
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/travel-booking-platform.git
+git clone https://github.com/codingwithashu/travel-booking-platform.git
 cd travel-booking-platform
 ```
 
